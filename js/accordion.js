@@ -4,7 +4,7 @@ const lists = document.querySelectorAll('.feature-sub');
 
 btns.forEach((btnItem, index) => {
     btnItem.addEventListener('click', () => {
-        if (btnItem.classList.contains('feature__link_active')) {
+        if (btnItem.classList.contains('feature__link_active')) { // closing accordion completely by click on active field
             btns.forEach((btnItem) => {
                 btnItem.classList.remove('feature__link_active');
             });
@@ -12,7 +12,7 @@ btns.forEach((btnItem, index) => {
                 listItem.classList.add('hidden');
             });
         }
-        else {
+        else { // opening accordion by click on inactive field and closing opened one before
             btns.forEach((btnItem) => {
                 btnItem.classList.remove('feature__link_active');
             });
